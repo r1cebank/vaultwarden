@@ -55,6 +55,11 @@ spec:
                 secretKeyRef:
                   name: {{ include "vaultwarden.fullname" . }}
                   key: SMTP_PASSWORD
+            - name: YUBICO_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "vaultwarden.fullname" . }}
+                  key: YUBICO_SECRET_KEY
             - name: ADMIN_TOKEN
               valueFrom:
                 secretKeyRef:
