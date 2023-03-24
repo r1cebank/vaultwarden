@@ -1,4 +1,3 @@
-
 ## @section Vaultwarden settings
 ##
 image:
@@ -100,7 +99,7 @@ ingress:
   ## @param ingress.nginxIngressAnnotations Add nginx specific ingress annotations
   ## This annotations are only makes sense for the kubernetes nginx ingress controller (https://kubernetes.github.io/ingress-nginx/)
   ##
-  nginxIngressAnnotations: true
+  nginxIngressAnnotations: false
   ## @param ingress.additionalAnnotations Additional annotations for the ingress resource.
   ##
   additionalAnnotations: {}
@@ -272,3 +271,11 @@ affinity: {}
 ## Ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
 ##
 tolerations: []
+
+## @section yubikey configuration
+## Ref: https://github.com/dani-garcia/vaultwarden/wiki/Enabling-Yubikey-OTP-authentication
+##
+yubikey:
+  enabled: false
+  clientId:
+  clientSecret:

@@ -43,3 +43,7 @@ data:
   LOG_FILE: {{ .Values.logging.logfile | quote }}
   LOG_LEVEL: {{ .Values.logging.loglevel | quote }}
   {{- end }}
+  {{- if .Vaules.yubikey.enabled }}
+  YUBICO_CLIENT_ID: {{ .Values.yubikey.clientId | quote }}
+  YUBICO_SECRET_KEY: {{ .Values.yubikey.clientSecret | quote }}
+  {{- end}}
